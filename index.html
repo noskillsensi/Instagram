@@ -98,25 +98,7 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const chatContainer = document.getElementById('chat-container');
-            const optionsContainer = document.getElementById('options-container');
-            let currentStep = 0;
-
-            const chatFlow = [
-                { type: 'bot', message: "Opa! Cansado de pinar tiro e ver os outros dar só capa?", delay: 1500, next: 1 },
-                { type: 'bot', message: "Relaxa, a gente vai resolver isso. Primeiro, me fala aí, você joga em:", delay: 2000, options: [{ text: "Android", next: 2 }, { text: "iPhone", next: 2 }] },
-                { type: 'bot', message: "Show! Se liga como o <strong>Aplicativo da Noskill</strong> funciona no seu celular. É assim que a sua mira vai ficar:", delay: 2500, next: 3 },
-                { 
-                    type: 'bot', 
-                    message: `<div class="aspect-video rounded-lg overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/Hvy9NoC7hIM?autoplay=1&loop=1&playlist=Hvy9NoC7hIM&controls=0&showinfo=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`, 
-                    delay: 3000, 
-                    next: 4 
-                },
-                { type: 'bot', message: "E o mais importante: isso <strong>NÃO é hack</strong>. É um <strong>auxiliador de mira</strong> 100% seguro e anti-ban. A sua conta fica protegida.", delay: 4000, options: [{ text: "Gostei! Como eu testo?", next: 5 }] },
-                { type: 'bot', message: "Criei uma simulação interativa do nosso painel para você mesmo mexer nas funções e sentir o poder. Clica aí para testar.", delay: 3500, options: [{ text: "TESTAR O PAINEL AGORA", action: 'redirect' }] }
-            ];
+            function showTypingIndicator() {
 
             function showTypingIndicator() {
                 const typingBubble = document.createElement('div');
@@ -222,4 +204,5 @@
     </script>
 </body>
 </html>
+
 
